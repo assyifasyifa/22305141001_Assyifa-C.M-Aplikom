@@ -1,0 +1,482 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{eumat}
+
+\begin{document}
+\begin{eulernotebook}
+\eulerheading{Identitas Diri}
+\begin{eulercomment}
+Nama : Assyifa Cahya Marsellita\\
+NIM  : 22305141001\\
+Matematika B 22
+
+\end{eulercomment}
+\eulersubheading{Analisis Data Statistika Deskriptif}
+\begin{eulercomment}
+\end{eulercomment}
+\begin{eulerttcomment}
+   Menurut Sudjana (2000) statistika adalah pengetahuan yang
+\end{eulerttcomment}
+\begin{eulercomment}
+berhubungan dengan cara-cara pengumpulan data, pengolahan atau
+penganalisaannya dan penarikan kesimpulan berdasarkan kumpulan data
+dan penganalisaan yang dilakukan. Tujuan dari statistika adalah untuk
+menyajikan data secara ringkas dan mudah dimengerti, sehingga dapat
+membuat kesimpulan dari suatu populasi dari data yang diambil.
+Statistika dibagi menjadi statistika deskriptif dan inferensial.\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Statistika deskriptif merupakakan cabang statistika yang fokus pada
+\end{eulerttcomment}
+\begin{eulercomment}
+pengumpulan, penyajian, dan menganalisa yang berwujud angka-angka agar
+data tersebut dapat ditampilkan secara ringkas dan informatif. Dalam
+statistika terdapat empat jenis statistika deskriptif yaitu,
+distribusi frekuensi, ukuran pemusatan, ukuran letak, dan ukuran
+penyebaran.\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Distribusi frekuensi adalah merangkum data dalam bentuk tabel atau
+\end{eulerttcomment}
+\begin{eulercomment}
+grafik, yang menunjukkan seberapa sering setiap nilai muncul dalam
+suatu himpunan data. Ukuran pemusatan terdiri dari mean (rata-rata),
+median (nilai tengah), dan modus (nilai yang sering muncul). Ukuran
+letak terdiri dari kuartil (membagi data menjadi empat bagian yang
+sama besar), desil (membagi data menjadi 10 bagian sama besar), dan
+persentil (membagi data menjadi 100 bagian sama besar). Ukuran
+penyebaran terdiri dari jangkauan (nilai maksimum dan minimum dalam
+suatu set data), varians (mengukur sejauh mana nilai tersebut menyebar
+dari rata-ratanya), simpangan baku (akar kuadrat dari varians, yang
+memberikan gambaran tentang seberapa dekat nilai-nilai dalam suatu set
+data terhadap rata-ratanya.)\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   Dari penjelasan singkat tentang data statistika deskriptif maka
+\end{eulerttcomment}
+\begin{eulercomment}
+pada sub bab ini, saya akan membahas analisis data statistika
+deskriptif dengan jenis ukuran letak dan ukuran penyebaran.
+\end{eulercomment}
+\eulersubheading{Ukuran Letak}
+\begin{eulercomment}
+Kita singgung kembali. Ukuran letak disini terdiri dari kuartil
+(membagi data menjadi empat bagian yang sama besar), desil (membagi
+data menjadi 10 bagian sama besar), dan persentil (membagi data
+menjadi 100 bagian sama besar).
+
+\begin{eulercomment}
+\eulerheading{Kuartil}
+\begin{eulercomment}
+Kuartil merupakan penggambaran pembagian data menjadi empat bagian
+yang sama besar. Kuartil membagi data menjadi tiga titik tertentu,
+yang dikenal sebagai kuartil pertama (Q1), kuartil kedua (Q2), dan
+kuartil ketiga (Q3). Rumus yang digunakan dalam menentukan posisi
+Q1,Q2,dan Q3 dengan\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+Qi = (i(n+1))/4
+\]
+\end{eulerformula}
+\begin{eulercomment}
+dimana i adalah indeks kuartil dan n adalah jumlah total data
+
+Dalam EMT fungsi yang dapat digunakan untuk menentukan kuartil adalah
+'quartiles()'.
+\end{eulercomment}
+\begin{eulerprompt}
+>data=[93,80,52,41,60,77,55,71,79,81,64,83,32,95,75,54,90,80,95];
+\end{eulerprompt}
+\begin{eulercomment}
+Diketahui sebuah data dari hasil nilai ujian akhir dari siswa
+\end{eulercomment}
+\begin{eulerprompt}
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [32,  41,  52,  54,  55,  60,  64,  71,  75,  77,  79,  80,  80,  81,
+  83,  90,  93,  95,  95]
+\end{euleroutput}
+\begin{eulercomment}
+Dalam menentukan kuartil langkah pertama yang dapat dilakukan dengan
+mengurutkan data tersebut dengan fungsi sort(data). Fungsi sort(data)
+dalam Euler Math Toolbox digunakan untuk mengurutkan elemen-elemen
+dalam suatu vektor atau matriks (dari nilai terkecil ke nilai
+terbesar).
+\end{eulercomment}
+\begin{eulerprompt}
+>quartiles(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [32,  55,  77,  83,  95]
+\end{euleroutput}
+\begin{eulercomment}
+Dalam output hitung yang dihasilkan dari 'quartiles(data)' dapat
+diketahui bahwa nilai Q1(kuartil bawah) = 55 , Q2(kuartil
+tengah(median)) = 77, dan Q3(kuartil atas)= 83. Lalu untuk nilai
+paling kanan dan paling kiri merupakan minimum dan maximum dari suatu
+data yang diketahui.
+
+Dengan cara rumus kuartil yang diketahui dapat dihitung nilai kuartil
+atas, tengah, dan bawah. Dengan cara...
+\end{eulercomment}
+\begin{eulerprompt}
+>data=[93,80,52,41,60,77,55,71,79,81,64,83,32,95,75,54,90,80,95];
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [32,  41,  52,  54,  55,  60,  64,  71,  75,  77,  79,  80,  80,  81,
+  83,  90,  93,  95,  95]
+\end{euleroutput}
+\begin{eulerprompt}
+>a=length(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  19
+\end{euleroutput}
+\begin{eulercomment}
+Setelah mengurutkan data tersebut, selanjutnya hitung banyaknya data
+tersebut dengan menggunakan fungsi 'length()'. Fungsi tersebut
+berfungsi untuk mengetahui banyaknya elemen dalam suatu vektor atau
+matriks. 
+\end{eulercomment}
+\begin{eulerprompt}
+>Q1=((a+1)/4)
+\end{eulerprompt}
+\begin{euleroutput}
+  5
+\end{euleroutput}
+\begin{eulercomment}
+Hasil Q1 menunjukkan 5 yang berarti letak kuartil ke-1 ada di data
+nomer 5 yaitu 55.
+\end{eulercomment}
+\begin{eulerprompt}
+>Q2=((a+1)/2)
+\end{eulerprompt}
+\begin{euleroutput}
+  10
+\end{euleroutput}
+\begin{eulercomment}
+Hasil Q2 menunjukkan 10 yang berarti letak kuartil ke-2 ada di data
+nomer 10 yaitu 77.
+\end{eulercomment}
+\begin{eulerprompt}
+>Q3=60/4
+\end{eulerprompt}
+\begin{euleroutput}
+  15
+\end{euleroutput}
+\begin{eulercomment}
+Hasil Q3 menunjukkan 15 yang berarti letak kuartil ke-3 ada di data
+nomer 15 yaitu 83. Mengapa fungsi ini saya hitung langsung? karena
+saat percobaan EMT tidak biasa membaca perintah maka dari itu saya
+menggunakan EMT secara langsung.
+
+
+Dari beberapa percobaan tersebut dapat diketahui bahwa dengan cara
+rumus kuartil ataupun menggunakan fungsi 'quartiles()' tersebut akan
+sama.
+\end{eulercomment}
+\eulersubheading{Desil dan Persentil}
+\begin{eulercomment}
+Desil merupakan pembagian data ke dalam sepuluh kelompok sebanding
+yang disusun berdasarkan urutan nilainya. Desil ke-1 (D1) adalah nilai
+terendah, desil ke-2 (D2) adalah nilai yang membagi data menjadi 10\%
+terendah, desil ke-3 (D3) membagi data menjadi 20\% terendah, dan
+seterusnya. Dalam EMT fungsi yang digunakan yaitu 'quantile()'
+
+
+Sedangkan persentil suatu nilai atau titik data yang membagi
+distribusi data menjadi persentase tertentu atau menjadi 100 bagian
+yang sama besar. Dalam EMT fungsi yang digunakan sama seperti desil
+yaitu 'quantile()'. Perbedaan penggunaannya terletak pada nilai yang
+akan dibaginya.
+\end{eulercomment}
+\begin{eulerprompt}
+>data=[93,80,52,41,60,77,55,71,79,81,64,83,32,95,75,54,90,80,95,55];
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [32,  41,  52,  54,  55,  55,  60,  64,  71,  75,  77,  79,  80,  80,
+  81,  83,  90,  93,  95,  95]
+\end{euleroutput}
+\begin{eulerprompt}
+>quantile(urut,0.1)
+\end{eulerprompt}
+\begin{euleroutput}
+  50.9
+\end{euleroutput}
+\begin{eulercomment}
+Dari hasil tersebut dapat diketahui bawha nilai desil ke-1 dan
+persentil ke-10 adalah 50,9
+\end{eulercomment}
+\begin{eulerprompt}
+>quantile(urut,0.2)
+\end{eulerprompt}
+\begin{euleroutput}
+  54.8
+\end{euleroutput}
+\begin{eulerprompt}
+>quantile(urut,0.5)
+\end{eulerprompt}
+\begin{euleroutput}
+  76
+\end{euleroutput}
+\begin{eulerprompt}
+>quantile(urut,0.7)
+\end{eulerprompt}
+\begin{euleroutput}
+  80.3
+\end{euleroutput}
+\begin{eulercomment}
+Dari dua percobaan tersebut diketahui nilai persentil ke-20 dan
+persentil ke-50 adalah 54,8 dan 76. Hasil tersebut sama dengan hasil
+desil ke-2 dan desil ke-5.
+
+Karena desil ke-8 (D8) adalah nilai yang membagi data menjadi 80\% di
+bawahnya dan 20\% di atasnya. Sedangkan persentil 80\% (P80) juga
+merujuk pada nilai yang membagi data menjadi 80\% di bawahnya dan 20\%
+di atasnya.
+\end{eulercomment}
+\eulersubheading{Ukuran Penyebaran}
+\begin{eulercomment}
+Kita singgung kembali. Ukuran penyebaran disini terdiri dari jangkauan
+yang terdiri dari nilai maksimum dan minimum, varians (mengukur sejauh
+mana nilai tersebut menyebar dari rata-ratanya), simpangan baku(akar
+kuadrat dari varians yang memberikan gambaran tentang seberapa dekat
+nilai-nilai dalam suatu set data terhadap rata-ratanya).
+
+\end{eulercomment}
+\eulersubheading{Jangkauan}
+\begin{eulercomment}
+Jangkauan (range) adalah salah satu ukuran penyebaran yang paling
+sederhana dalam statistika. Jangkauan dapat dihitung dengan mengambil
+selisih antara nilai maksimum dan minimum dalam suatu set data.
+
+Untuk menemukan jangkauan data tunggal di EMT dapat menggunakan
+perintah berikut:\\
+\textgreater{} x=[data]; max(x)-min(x)
+\end{eulercomment}
+\begin{eulerprompt}
+>data=[65,55,70,85,90,75,80,75];
+>a=max(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  90
+\end{euleroutput}
+\begin{eulerprompt}
+>b=min(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  55
+\end{euleroutput}
+\begin{eulercomment}
+Permisalan dengan a = max(data) dan b = min(data) memudahkan untuk
+menghitung nilai jangkauan.
+\end{eulercomment}
+\begin{eulerprompt}
+>jangkauan = a-b
+\end{eulerprompt}
+\begin{euleroutput}
+  35
+\end{euleroutput}
+\begin{eulercomment}
+Dalam menentukan nilai jangkauan antara nilai maximum dan minimum
+dapat dilakukan dengan cara menentukan nilai maximum dan minimum dari
+data tersebut, lalu kurangi antara hasil dari nilai maximum dan
+minimum tersebut.
+
+Untuk data berkelompok dapat menggunakan rumus;\\
+\textgreater{} max(transpose(T[,2]))-min(transpose(T[,1]))
+
+Dimisalkan diketahui sebuah table distribusi frekuensi
+\end{eulercomment}
+\begin{eulerprompt}
+>r=39.5:5:69.5; v=[5,18,42,20,9,6];
+>T:=r[1:6]' |r[2:7]'| v'; writetable(T,labc=["TB","TA","Frek"])
+\end{eulerprompt}
+\begin{euleroutput}
+          TB        TA      Frek
+        39.5      44.5         5
+        44.5      49.5        18
+        49.5      54.5        42
+        54.5      59.5        20
+        59.5      64.5         9
+        64.5      69.5         6
+\end{euleroutput}
+\begin{eulerprompt}
+>max(transpose(T[,2]))-min(transpose(T[,1]))
+\end{eulerprompt}
+\begin{euleroutput}
+  30
+\end{euleroutput}
+\begin{eulercomment}
+Jadi dapat diketahui bahwa jangkauan dari nilai tersebut adalah 30
+orang. 
+\end{eulercomment}
+\eulersubheading{Varians}
+\begin{eulercomment}
+Varians adalah nilai statistik yang sering kali dipakai dalam
+menentukan kedekatan sebaran data yang ada di dalam sampel dan
+seberapa dekat titik data individu dengan mean atau rata-rata nilai
+dari sampel itu sendiri.
+
+Pada EMT, dalam menentukan suatu varians dapat menggunakan fungsi
+'dev()\textasciicircum{}2'. Fungsi dev disini merupakan kepanjangan dari deviations
+yang berarti suatu verktor atau array yang berisi deviasi dari setiap
+nilai dalam data. 
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+{dev} = x_i - \bar{x}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>data=[65,55,70,85,90,75,80,75];
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [55,  65,  70,  75,  75,  80,  85,  90]
+\end{euleroutput}
+\begin{eulerprompt}
+>a = mean(urut)
+\end{eulerprompt}
+\begin{euleroutput}
+  74.375
+\end{euleroutput}
+\begin{eulerprompt}
+>dev = urut-a
+>varians = mean(dev^2)
+\end{eulerprompt}
+\begin{euleroutput}
+  108.984375
+\end{euleroutput}
+\begin{eulercomment}
+Jadi nilai varians dari data tersebut adalah 108,984375. Lali
+bagaimana jika suatu data tersebut berkelompok?
+\end{eulercomment}
+\begin{eulerprompt}
+>r=499.5:100:1099.5; v=[4,6,12,15,10,3];
+>T:=r[1:6]' | r[2:7]' | v'; writetable(T,labc=["tepi bawah","tepi atas","frekuensi"])
+\end{eulerprompt}
+\begin{euleroutput}
+   tepi bawah tepi atas frekuensi
+        499.5     599.5         4
+        599.5     699.5         6
+        699.5     799.5        12
+        799.5     899.5        15
+        899.5     999.5        10
+        999.5    1099.5         3
+\end{euleroutput}
+\begin{eulerprompt}
+>(T[,1]+T[,2])/2; t=fold(r,[0.5,0.5])
+\end{eulerprompt}
+\begin{euleroutput}
+  [549.5,  649.5,  749.5,  849.5,  949.5,  1049.5]
+\end{euleroutput}
+\begin{eulerprompt}
+>m = mean(t,v)
+\end{eulerprompt}
+\begin{euleroutput}
+  809.5
+\end{euleroutput}
+\begin{eulerprompt}
+>sum(v*(t-m)^2)/(sum(v)-1)
+\end{eulerprompt}
+\begin{euleroutput}
+  17551.0204082
+\end{euleroutput}
+\eulersubheading{Simpangan Baku}
+\begin{eulercomment}
+Simpangan baku atau deviasi standar adalah ukuran seberapa jauh
+nilai-nilai dalam satu set data tersebar dari nilai rata-ratanya. Ini
+memberikan gambaran tentang sejauh mana nilai-nilai dalam data
+"berkumpul" atau "menyebar" di sekitar rata-ratanya.
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\sigma=\sqrt{varians}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Pada sub bab sebelumnya telah dijelaskan bagaiaman cara mencari nilai
+suatu varians. Mengulang kembali varians menggunakan fungsi 
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+mean*dev()^2
+\]
+\end{eulerformula}
+\begin{eulercomment}
+sedangkan simpangan baku menggunakan\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\sigma=\sqrt{mean*dev()^2}
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+ 
+\end{eulerttcomment}
+\begin{eulerprompt}
+>data=[65,55,70,85,90,75,80,75];
+>urut=sort(data)
+\end{eulerprompt}
+\begin{euleroutput}
+  [55,  65,  70,  75,  75,  80,  85,  90]
+\end{euleroutput}
+\begin{eulerprompt}
+>a = mean(urut)
+\end{eulerprompt}
+\begin{euleroutput}
+  74.375
+\end{euleroutput}
+\begin{eulercomment}
+Menentukan sebuah rata-rata dari data tersebut.
+\end{eulercomment}
+\begin{eulerprompt}
+>dev = urut-a
+\end{eulerprompt}
+\begin{euleroutput}
+  [-19.375,  -9.375,  -4.375,  0.625,  0.625,  5.625,  10.625,  15.625]
+\end{euleroutput}
+\begin{eulerprompt}
+>varians = mean(dev^2)
+\end{eulerprompt}
+\begin{euleroutput}
+  108.984375
+\end{euleroutput}
+\begin{eulerprompt}
+>simpanganBaku = sqrt(var)
+\end{eulerprompt}
+\begin{euleroutput}
+  10.4395581803
+\end{euleroutput}
+\begin{eulercomment}
+Nilai simpangan baku dari data tersebut adalah 10.4395581803
+\end{eulercomment}
+\begin{eulerprompt}
+>r=499.5:100:1099.5; v=[4,6,12,15,10,3];
+>T:=r[1:6]' | r[2:7]' | v'; writetable(T,labc=["tepi bawah","tepi atas","frekuensi"])
+\end{eulerprompt}
+\begin{euleroutput}
+   tepi bawah tepi atas frekuensi
+        499.5     599.5         4
+        599.5     699.5         6
+        699.5     799.5        12
+        799.5     899.5        15
+        899.5     999.5        10
+        999.5    1099.5         3
+\end{euleroutput}
+\begin{eulerprompt}
+>(T[,1]+T[,2])/2; t=fold(r,[0.5,0.5]); m=mean(t,v);
+>sqrt(sum(v*(t-m)^2)/(sum(v)-1))
+\end{eulerprompt}
+\begin{euleroutput}
+  132.480264221
+\end{euleroutput}
+\end{eulernotebook}
+\end{document}
